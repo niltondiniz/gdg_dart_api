@@ -18,10 +18,6 @@ void main() async {
   app.get('/seed', _handleSeed);
 
   var server = await shelf_io.serve(app, 'localhost', 8080);
-
-  final handler = SwaggerUI(path, title: 'Swagger Test');
-  var swaggerServer = await shelf_io.serve(handler, '0.0.0.0', 4001);
-
   print('Serving at http://${server.address.host}:${server.port}');
 }
 
