@@ -9,15 +9,14 @@ import 'bus_position_entity.dart';
 
 List<BusPositionEntity> listBusPosition = [];
 
-void main() async {
-  final path = 'specs/swagger.yaml';
+void main() async {  
   final app = Router();
   app.get('/', _handle);
   app.post('/position', _handlePostPosition);
   app.get('/position', _handleGetPositions);
   app.get('/seed', _handleSeed);
 
-  var server = await shelf_io.serve(app, 'localhost', 8080);
+  var server = await shelf_io.serve(app, '0.0.0.0', 8080);
   print('Serving at http://${server.address.host}:${server.port}');
 }
 
