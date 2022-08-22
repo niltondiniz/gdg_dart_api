@@ -1,0 +1,11 @@
+openapi: 3.0.0
+info:
+  description: "Dart Api"
+  version: "1.0.0"
+  title: "GDG 2022 Dart Api"
+servers:
+  - url: http://my-service.info
+    description: Remote server
+tags:
+- name: "user"
+  description: "Access to User"
